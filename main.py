@@ -90,10 +90,11 @@ def makeCompletion():
     
     return message
 
+
 class Sidebar(ctk.CTkScrollableFrame):
     def __init__(self, parent):
         super().__init__(parent)
-        self.grid(row = 1, column = 0, columnspan = 2, padx = 10, pady = 10, sticky = "nsew")
+        self.grid(row = 1, column = 0, columnspan = 3, padx = 10, pady = 10, sticky = "nsew")
         
         self.grid_columnconfigure(0, weight = 1)
         self.items = []
@@ -138,9 +139,17 @@ class Sidebar(ctk.CTkScrollableFrame):
             chatInfo = savedChatsDB[chatName]
             self.add(chatInfo)
 
-class MainWindow(ctk.CTKFrame):
+class MainWindow(ctk.CTkFrame):
     def __init__(self, parent):
         super().__init__(parent)
+        self.grid(column = 3, row = 1, sticky = "nswe", padx = (0, 10), pady = 10)
+        
+        # Menu screen
+        
+        startAdventureButton = ctk.CTkButton(text = "Start New Adventure")
+    
+    def menuScreen():
+        pass
         
 
 class App(ctk.CTk):
@@ -154,9 +163,10 @@ class App(ctk.CTk):
         
         # Grid configuration
         
-        self.grid_columnconfigure(0, weight = 0, minsize = 300)
+        self.grid_columnconfigure(0, weight = 0, minsize = 150)
         self.grid_columnconfigure(1, weight = 0)
-        self.grid_columnconfigure(2, weight = 10)
+        self.grid_columnconfigure(2, weight = 0)
+        self.grid_columnconfigure(3, weight = 1)
         
         self.grid_rowconfigure(0, weight = 0, minsize = 30)
         self.grid_rowconfigure(1, weight = 1)
@@ -164,6 +174,7 @@ class App(ctk.CTk):
         # Inner windows
         
         self.sidebar = Sidebar(self)
+        self.mainWindow = MainWindow(self)
         
         sidebarTitleContainer = ctk.CTkFrame(self)
         sidebarTitleContainer.grid(row = 0, column = 0, padx = 10, pady = (10, 0), sticky="nsew")
@@ -172,14 +183,19 @@ class App(ctk.CTk):
         sidebarTitle.pack()
         
         saveChatIcon = ImageTk.PhotoImage(Image.open("assets/SaveIcon.png").resize((20, 20), Image.Resampling.BILINEAR))
-        newChatButton = ctk.CTkButton(self, image = saveChatIcon, text = "", width = 30, command = self.saveChat)
+        saveChatButton = ctk.CTkButton(self, image = saveChatIcon, text = "", width = 30, command = self.saveChat)
+        saveChatButton.grid(row = 0, column = 2, padx = (0, 10), pady = (10, 0), sticky="nsew")
+        
+        newChatButton = ctk.CTkButton(self, text = "+", width = 30)
         newChatButton.grid(row = 0, column = 1, padx = (0, 10), pady = (10, 0), sticky="nsew")
+        
     
     
     def saveChat(self):
-        chatName = str(ctk.CTkInputDialog(text = "Name your chat", title = "Save Chat").get_input())
+        chatName = ctk.CTkInputDialog(text = "Name your chat", title = "Save Chat").get_input()
         
         if chatName != None:
+            chatName = str(chatName)
             chatinfo = {
                 "name" : chatName,
                 "savedTime" : time.time(),
