@@ -7,10 +7,11 @@ import uuid
 import json
 import random
 import time
+import tokens
 
 ### Variables ###
 MODEL = "gpt-3.5-turbo"
-openai.api_key = "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"
+openai.api_key = tokens.openAiToken()
 sessionId = "session-" + str(uuid.uuid4())
 
 mock_data = True
