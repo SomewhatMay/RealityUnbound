@@ -90,6 +90,36 @@ def makeCompletion():
     
     return message
 
+class ConfirmDeleteDialog(ctk.CTkToplevel):
+    def __init__(self, parent, callback):
+        super().__init__(parent)
+        self.title("Confirm Delete")
+        self.transient(parent)
+
+        self.result = None
+        self.callback = callback
+
+        message_label = ctk.CTkLabel(self, text="Are you sure you want to delete this save?")
+        message_label.pack(padx=20, pady=20)
+
+        button_frame = ctk.CTkFrame(self, fg_color="transparent")
+        button_frame.pack(padx = 10, pady = 10)
+
+        yes_button = ctk.CTkButton(button_frame, text="Yes", command=self.on_yes, fg_color="red", hover_color="darkred")
+        yes_button.pack(side="left", padx=10)
+
+        no_button = ctk.CTkButton(button_frame, text="No", command=self.on_no)
+        no_button.pack(side="right", padx=10)
+
+    def on_yes(self):
+        self.result = True
+        self.callback(self.result)
+        self.destroy()
+
+    def on_no(self):
+        self.result = False
+        self.callback(self.result)
+        self.destroy()
 
 class Sidebar(ctk.CTkScrollableFrame):
     def __init__(self, parent):
@@ -121,11 +151,30 @@ class Sidebar(ctk.CTkScrollableFrame):
             fg_color = "#242424",
             hover_color = "#1D1D1D",
             width = 20,
-            command = lambda: self.remove(chatInfo, chatButton)
+            command = lambda: self.removeRequest(chatInfo, chatButton)
         )
         # removeButton.grid(column = 1, row = itemsLen, pady = (0, 10), sticky = "nsew")
         
         removeButton.place(relx = 1, x = -25)
+        
+    # def removeRequest(self, chatInfo, button):
+    #     result = None
+
+    #     ConfirmDeleteDialog(app, lambda x: result = x)
+        
+    #     if result:
+    #         self.remove(chatInfo, button)
+    #     else:
+    #         print("User doesnt want to delete window!")
+    
+    def removeRequest(self, chatInfo, button):
+        def delete_callback(result):
+            if result:
+                self.remove(chatInfo, button)
+            else:
+                print("User doesn't want to delete window!")
+
+        app.wait_window(ConfirmDeleteDialog(app, delete_callback))
     
     def remove(self, chatInfo, button):
         button.destroy()
@@ -139,17 +188,120 @@ class Sidebar(ctk.CTkScrollableFrame):
             chatInfo = savedChatsDB[chatName]
             self.add(chatInfo)
 
-class MainWindow(ctk.CTkFrame):
+class ChatBubble(ctk.CTkLabel):
+    def __init__(self, parent, color):
+        super().__init__(parent, fg_color=color)
+    
+    def setText(self, text):
+        self.config(text = text)
+        
+    def animateText(self, text, counter=1):
+        self.config(text = text[:counter])
+        
+        if counter < len(text):
+            app.after(150, lambda: self.animateText(self, text, counter + 1))
+        
+
+class MessagesWindow(ctk.CTkScrollableFrame):
     def __init__(self, parent):
         super().__init__(parent)
+        self.messages = []
+    
+    def displayMessage(self, messageInfo):
+        color = "blue" if messageInfo.role == "system" else "green"
+        chatBubble = ChatBubble(self, color)
+        chatBubble.pack(anchor = "w")
+        self.messages.append(chatBubble)
+        self.update_idletasks()
+        
+        
+        self.inner_canvas.yview._moveto(1.0)
+        
+
+class MainWindow(ctk.CTkFrame):
+    def __init__(self, parent):
+        super().__init__(parent, fg_color = "transparent")
         self.grid(column = 3, row = 1, sticky = "nswe", padx = (0, 10), pady = 10)
         
         # Menu screen
         
-        startAdventureButton = ctk.CTkButton(self, text = "Start New Adventure")
-    
-    def menuScreen():
-        pass
+        startAdventureButton = ctk.CTkButton(
+            self, 
+            text = "Start New Adventure"
+        )
+        # startAdventureButton.grid(column = 1, row = 1)
+
+        self.startAdventureButton = startAdventureButton
+
+        # Chat screen
+
+        topBar = ctk.CTkLabel(
+            parent, 
+            text = "Reality Unbound", 
+            anchor = "w",
+            fg_color = "#2b2b2b",
+            corner_radius = 8
+        )
+        
+        topBar.grid(column = 3, row = 0, sticky = "nsew", padx = (0, 10), pady = (10, 0))
+        self.topBar = topBar
+        
+        messagesWindow = MessagesWindow()
+        
+        chatBox = ctk.CTkEntry(
+            self,
+            placeholder_text = "Type here..."
+        )
+        
+        sendChatIcon = ImageTk.PhotoImage(Image.open("assets/SendChat.png").resize((20, 20), Image.Resampling.BILINEAR))
+        sendButton = ctk.CTkButton(
+            self,
+            text = "",
+            image = sendChatIcon,
+            width = 30,
+            #command = self.sendMessage
+        )
+        
+        self.messagesWindow = messagesWindow
+        self.chatBox = chatBox
+        self.sendButton = sendButton
+        
+        self.menuScreen()
+
+    def menuScreen(self):
+        self.grid_columnconfigure(0, weight = 1)
+        self.grid_columnconfigure(1, weight = 1)
+        self.grid_columnconfigure(2, weight = 1)
+        
+        self.grid_rowconfigure(0, weight = 1)
+        self.grid_rowconfigure(1, weight = 1)
+        self.grid_rowconfigure(2, weight = 1)
+        
+        # Load the button
+        self.startAdventureButton.grid(row = 1, column = 1)
+        
+        # the other stuff
+        #self.topBar.grid(row = 0, column = 0, columnspan = 3)
+        self.messagesWindow.forget()
+        self.chatBox.forget()
+        self.sendButton.forget()
+        
+    def chatScreen(self):
+        self.grid_columnconfigure(0, weight = 1)
+        self.grid_columnconfigure(1, weight = 0, minsize = 30)
+        self.grid_columnconfigure(2, weight = 0)
+        
+        self.grid_rowconfigure(0, weight = 1)
+        self.grid_rowconfigure(1, weight = 0, minsize = 30)
+        self.grid_rowconfigure(2, weight = 0)
+        
+        self.startAdventureButton.forget()
+        
+        #self.topBar.grid(row = 0, column = 0, columnspan = 2)
+        self.messagesWindow.grid(row = 0, column = 0, columnspan = 2, sticky = "nsew")
+        self.chatBox.grid(row = 1, column = 0, sticky = "nsew", padx = (0, 10), pady = (10, 0))
+        self.sendButton.grid(row = 1, column = 1, pady = (10, 0))
+        
         
 
 class App(ctk.CTk):
@@ -241,6 +393,7 @@ if not mock_data:
         exit()
 
 if __name__ == "__main__":
+    global app
     app = App()
     app.mainloop()
     
