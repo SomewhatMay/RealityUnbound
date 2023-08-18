@@ -146,7 +146,7 @@ class MainWindow(ctk.CTkFrame):
         
         # Menu screen
         
-        startAdventureButton = ctk.CTkButton(text = "Start New Adventure")
+        startAdventureButton = ctk.CTkButton(self, text = "Start New Adventure")
     
     def menuScreen():
         pass
