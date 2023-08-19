@@ -1,11 +1,31 @@
 {
-    "twta 2": {
-        "name": "twta 2",
-        "savedTime": 1692391355.4759567,
+    "this has no body": {
+        "name": "this has no body",
+        "savedTime": 1692423770.128701,
         "messages": [
             {
                 "role": "system",
-                "content": "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! Please start off by introducing the game to the player."
+                "content": "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! Messages from \"example_assistant\" are only examples, not a part of the real conversation. Please begin by explaining and introducing the game to the player."
+            },
+            {
+                "role": "assistant",
+                "content": "You chat with the villagers and gather information about the cave. They warn you about dangerous creatures that inhabit it and mention a legendary beast guarding its depths. Some suggest seeking the village herbalist for protective potions. What will you do?\n\n1. Take the advice and visit the herbalist for potions.\n2. Trust your skills and head to the cave without potions.\n3. Decide to explore the outskirts of the village instead.\n4. (Type another action in...)"
+            },
+            {
+                "role": "user",
+                "content": "adsfsdg"
+            },
+            {
+                "role": "assistant",
+                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck! \n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+            },
+            {
+                "role": "user",
+                "content": "adfgjkosgdffgdfg"
+            },
+            {
+                "role": "assistant",
+                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
             }
         ]
     }

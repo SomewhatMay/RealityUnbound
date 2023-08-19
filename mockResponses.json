@@ -51,7 +51,7 @@
                 "index": 0,
                 "message": {
                     "role": "assistant",
-                    "content": "You choose the left path and find yourself in a dimly lit chamber. There, you discover a chest. As you approach it, the ground trembles, and the chest transforms into a Mimic—a creature that mimics objects to trap unsuspecting adventurers! It lunges at you, its sharp teeth gnashing. What's your move?\n\n1. Draw your weapon and fight the Mimic.\n2. Try to reason with the Mimic, hoping to avoid a fight.\n3. Dodge to the side and attempt to flee from the chamber.\n4. (Type another action in...)"
+                    "content": "You choose the left path and find yourself in a dimly lit chamber. There, you discover a chest. As you approach it, the ground trembles, and the chest transforms into a Mimic\u00e2\u20ac\u201da creature that mimics objects to trap unsuspecting adventurers! It lunges at you, its sharp teeth gnashing. What's your move?\n\n1. Draw your weapon and fight the Mimic.\n2. Try to reason with the Mimic, hoping to avoid a fight.\n3. Dodge to the side and attempt to flee from the chamber.\n4. (Type another action in...)"
                 },
                 "finish_reason": "stop"
             }
@@ -123,6 +123,90 @@
             "prompt_tokens": 101,
             "completion_tokens": 196,
             "total_tokens": 297
+        }
+    },
+    {
+        "id": "chatcmpl-7p8JfIHXhEf1su170s33eUuKHKkbQ",
+        "object": "chat.completion",
+        "created": 1692421051,
+        "model": "gpt-3.5-turbo-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck! \n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 363,
+            "completion_tokens": 113,
+            "total_tokens": 476
+        }
+    },
+    {
+        "id": "chatcmpl-7p8KDUw49GosIjElsvZBAOmzJhlsZ",
+        "object": "chat.completion",
+        "created": 1692421085,
+        "model": "gpt-3.5-turbo-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 363,
+            "completion_tokens": 112,
+            "total_tokens": 475
+        }
+    },
+    {
+        "id": "chatcmpl-7p8KiMOrn8C4DN5XHJNtwvY1WRJbD",
+        "object": "chat.completion",
+        "created": 1692421116,
+        "model": "gpt-3.5-turbo-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "No problem! Take your time to think it over. Remember, your choices will have consequences, so choose wisely."
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 486,
+            "completion_tokens": 23,
+            "total_tokens": 509
+        }
+    },
+    {
+        "id": "chatcmpl-7p8qr6aLVG81vjrCXq8LsLaA53ZfH",
+        "object": "chat.completion",
+        "created": 1692423109,
+        "model": "gpt-3.5-turbo-0613",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                },
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 363,
+            "completion_tokens": 112,
+            "total_tokens": 475
         }
     }
 ]
