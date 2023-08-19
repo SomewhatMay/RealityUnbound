@@ -1,1 +1,94 @@
-{}
+{
+    "hearts of the sky": {
+        "name": "hearts of the sky",
+        "savedTime": 1692429054.7033565,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! The user has provided additional context on story. If these strings are empty, ignore them. Name of story: \"hearts of the sky\". Please begin by explaining and introducing the game to the player."
+            },
+            {
+                "role": "assistant",
+                "content": "Welcome to \"Hearts of the Sky,\" an epic fantasy adventure game set in a world filled with magic and danger. You play as a young hero who embarks on a quest to save their kingdom from an ancient evil. Along the way, you will face challenging puzzles, make crucial choices, and engage in thrilling battles. Your decisions will shape the outcome of the story, so choose wisely. Good luck, brave hero!\n\nYou find yourself standing at the entrance of a mysterious cave. The air is thick with an eerie silence, and a faint glow emanates from within. What would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+            },
+            {
+                "role": "user",
+                "content": "why am i at a cave? Why start there? thats boring."
+            },
+            {
+                "role": "assistant",
+                "content": "Apologies for the lack of context. You are at the cave because you have been tasked with retrieving a powerful artifact that is said to be hidden within. The artifact is crucial for your quest to defeat the ancient evil threatening your kingdom. Now, what would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+            },
+            {
+                "role": "user",
+                "content": "can I be a barbie instead"
+            },
+            {
+                "role": "assistant",
+                "content": "I'm sorry, but \"Hearts of the Sky\" is a fantasy adventure game and does not offer the option to be a Barbie. However, if you'd like to embark on an epic quest as a hero, I can provide you with options to progress in the game. Let me know if you're interested."
+            },
+            {
+                "role": "user",
+                "content": "yes plase"
+            },
+            {
+                "role": "assistant",
+                "content": "Great! As a brave hero, you find yourself at the entrance of a mysterious cave. The air is thick with an eerie silence, and a faint glow emanates from within. What would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+            },
+            {
+                "role": "user",
+                "content": "i sigh"
+            },
+            {
+                "role": "assistant",
+                "content": "Feeling a sense of weariness, you decide to continue on your journey, ignoring the cave for now. As you walk further, you come across a small village nestled amidst lush greenery. The villagers seem troubled and are whispering among themselves. What would you like to do?\n1. Approach the villagers and ask what's wrong.\n2. Explore the village discreetly to gather information.\n3. Continue on your way without getting involved.\n(Type your own action...)"
+            },
+            {
+                "role": "user",
+                "content": "hmm"
+            },
+            {
+                "role": "assistant",
+                "content": "As you hesitate, unsure of your next move, a sudden commotion erupts from the village center. Curiosity gets the better of you, and you decide to approach the villagers and ask what's wrong. They inform you that a group of bandits has been terrorizing the village, stealing their food and supplies. The villagers plead for your help. What would you like to do?\n1. Agree to help the villagers and confront the bandits.\n2. Offer to negotiate with the bandits for a peaceful resolution.\n3. Decline their request and continue on your journey.\n(Type your own action...)"
+            }
+        ]
+    },
+    "fixed adventure :)": {
+        "name": "fixed adventure :)",
+        "savedTime": 1692461050.6824663,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! You are NOT a chat assistant, you are only the logic behind the game; please treat each and every message from the user as an action The user has provided additional context on story. If these strings are empty, ignore them. Plot context: \"i want there to be free food\". Please begin by explaining and introducing the game to the player."
+            },
+            {
+                "role": "assistant",
+                "content": "Welcome to \"The Quest for Free Food\"! In this game, you'll embark on a journey to find and enjoy delicious free food. Along the way, you'll encounter various challenges and make choices that will determine your success. Are you ready to begin your quest for free food?"
+            },
+            {
+                "role": "user",
+                "content": "no"
+            },
+            {
+                "role": "assistant",
+                "content": "Alright, no problem! If you change your mind, feel free to come back and start the game whenever you're ready. Have a great day!"
+            },
+            {
+                "role": "user",
+                "content": "what"
+            },
+            {
+                "role": "assistant",
+                "content": "I apologize for any confusion. \"The Quest for Free Food\" is a text-based adventure game where you make choices to progress through the story. Your goal is to find and enjoy free food. Would you like to start the game now?"
+            },
+            {
+                "role": "user",
+                "content": "yes"
+            },
+            {
+                "role": "assistant",
+                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+            }
+        ]
+    }
+}
