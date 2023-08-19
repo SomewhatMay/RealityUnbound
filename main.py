@@ -15,6 +15,8 @@ openai.api_key = tokens.openAiToken()
 sessionId = "session-" + str(uuid.uuid4())
 
 mock_data = True
+is_loading_chat = False
+is_querying = False
 
 with open("responses.json", "r") as responseJson:
     responseDB = json.load(responseJson)
@@ -139,6 +141,7 @@ class Sidebar(ctk.CTkScrollableFrame):
             fg_color = "#242424", 
             hover_color = "#1D1D1D", 
             anchor = "w",
+            command = lambda: app.loadChat(chatInfo)
         )
         
         itemsLen = len(self.items)
@@ -156,16 +159,6 @@ class Sidebar(ctk.CTkScrollableFrame):
         # removeButton.grid(column = 1, row = itemsLen, pady = (0, 10), sticky = "nsew")
         
         removeButton.place(relx = 1, x = -25)
-        
-    # def removeRequest(self, chatInfo, button):
-    #     result = None
-
-    #     ConfirmDeleteDialog(app, lambda x: result = x)
-        
-    #     if result:
-    #         self.remove(chatInfo, button)
-    #     else:
-    #         print("User doesnt want to delete window!")
     
     def removeRequest(self, chatInfo, button):
         def delete_callback(result):
@@ -188,35 +181,95 @@ class Sidebar(ctk.CTkScrollableFrame):
             chatInfo = savedChatsDB[chatName]
             self.add(chatInfo)
 
-class ChatBubble(ctk.CTkLabel):
-    def __init__(self, parent, color):
-        super().__init__(parent, fg_color=color)
+class ChatBubble(ctk.CTkFrame):
+    def __init__(self, parent, role):
+        super().__init__(parent)
+
+        roleName = "Reality Unbound" if role == "assistant" else "user"
+        color = "#0c84fe" if role == "system" else "#7bdf3e"
+
+        self.grid_rowconfigure(0, weight = 0, minsize = 20)
+        self.grid_rowconfigure(1, weight = 1)
+
+        mainLabel = ctk.CTkLabel(
+            self,
+            fg_color = color,
+            padx = 10,
+            pady = 10,
+            font = (ctk.CTkFont, 13),
+            corner_radius = 8,
+            wraplength = 500,  
+            justify = "left",  
+            anchor = "w",
+            text = ""
+        )
+        mainLabel.grid(column = 0, row = 1, sticky = "nsew")
+
+        userLabel = ctk.CTkLabel(
+            self,
+            fg_color = "transparent",
+            padx = 5,
+            pady = 10,
+            text = roleName,
+            font = (ctk.CTkFont, 14),
+            justify = "left",
+            anchor = "w"
+        )
+        userLabel.grid(column = 0, row = 0, sticky = "nsew")
+
+        self.userLabel = userLabel
+        self.mainLabel = mainLabel
     
     def setText(self, text):
-        self.config(text = text)
+        self.mainLabel.configure(text = text)
         
     def animateText(self, text, counter=1):
-        self.config(text = text[:counter])
+        self.configure(text = text[:counter])
         
         if counter < len(text):
-            app.after(150, lambda: self.animateText(self, text, counter + 1))
-        
+            app.after(150, lambda: self.animateText(self, text, counter + 1))       
 
-class MessagesWindow(ctk.CTkScrollableFrame):
+class MessagesWindow(ctk.CTkFrame):
     def __init__(self, parent):
         super().__init__(parent)
+        
+        self.grid(row = 0, column = 0, sticky = "nsew")
+
+        self.canvas = ctk.CTkCanvas(self, bg="#2b2b2b", highlightthickness=0)
+        self.scrollbar = ctk.CTkScrollbar(self, command=self.canvas.yview)
+        self.scrollable_frame = ctk.CTkFrame(self.canvas, fg_color="transparent")
+
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.scrollbar.pack(side="right", fill="y")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+
+        self.scrollable_frame.bind("<Configure>", self.on_frame_configure)
+        self.canvas.bind_all("<MouseWheel>", self.on_mousewheel)
+
         self.messages = []
+
+        self.index = 0
     
-    def displayMessage(self, messageInfo):
-        color = "blue" if messageInfo.role == "system" else "green"
-        chatBubble = ChatBubble(self, color)
-        chatBubble.pack(anchor = "w")
-        self.messages.append(chatBubble)
-        self.update_idletasks()
-        
-        
-        self.inner_canvas.yview._moveto(1.0)
-        
+    def add_message(self, messageInfo):
+        # Create a new label for the message
+        message_label = ChatBubble(self.scrollable_frame, messageInfo["role"])
+        message_label.setText(messageInfo["role"] + " -> " + messageInfo["content"])
+        message_label.pack(side="top", fill="both", expand=True, pady = 5, padx = 10)
+
+        # Add the label to the messages list
+        self.messages.append(message_label)
+
+        # Automatically scroll to the bottom
+        self.canvas.update_idletasks()
+        self.canvas.yview_moveto(1)
+
+    def on_frame_configure(self, event):
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+
+    def on_mousewheel(self, event):
+        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")     
 
 class MainWindow(ctk.CTkFrame):
     def __init__(self, parent):
@@ -246,7 +299,7 @@ class MainWindow(ctk.CTkFrame):
         topBar.grid(column = 3, row = 0, sticky = "nsew", padx = (0, 10), pady = (10, 0))
         self.topBar = topBar
         
-        messagesWindow = MessagesWindow()
+        messagesWindow = MessagesWindow(self)
         
         chatBox = ctk.CTkEntry(
             self,
@@ -266,7 +319,7 @@ class MainWindow(ctk.CTkFrame):
         self.chatBox = chatBox
         self.sendButton = sendButton
         
-        self.menuScreen()
+        self.chatScreen()
 
     def menuScreen(self):
         self.grid_columnconfigure(0, weight = 1)
@@ -301,8 +354,6 @@ class MainWindow(ctk.CTkFrame):
         self.messagesWindow.grid(row = 0, column = 0, columnspan = 2, sticky = "nsew")
         self.chatBox.grid(row = 1, column = 0, sticky = "nsew", padx = (0, 10), pady = (10, 0))
         self.sendButton.grid(row = 1, column = 1, pady = (10, 0))
-        
-        
 
 class App(ctk.CTk):
     def __init__(self):
@@ -340,9 +391,7 @@ class App(ctk.CTk):
         
         newChatButton = ctk.CTkButton(self, text = "+", width = 30)
         newChatButton.grid(row = 0, column = 1, padx = (0, 10), pady = (10, 0), sticky="nsew")
-        
-    
-    
+
     def saveChat(self):
         chatName = ctk.CTkInputDialog(text = "Name your chat", title = "Save Chat").get_input()
         
