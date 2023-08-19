@@ -26,7 +26,7 @@ if Path("./tokens.py"):
 
 sessionId = "session-" + str(uuid.uuid4())
 
-mock_data = True
+mock_data = False
 is_loading_chat = False
 is_querying = False
 is_type_writing_response = False
@@ -54,7 +54,7 @@ currentChatName = sessionId
 deafult_messages = [
     {
         "role" : "system",
-        "content" : "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! Messages from \"example_assistant\" are only examples, not a part of the real conversation.",
+        "content" : "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable!",
     },
 ]
 
@@ -65,28 +65,32 @@ messages = deafult_messages
 
 def _typewriter_help(textable, value, requiredIndex, counter=1):
     global is_type_writing_response
-    currentIndex = textable._type_writer_index
+     
+    try: 
+        currentIndex = textable._type_writer_index
 
-    if not (currentIndex == requiredIndex):
-        return
+        if not (currentIndex == requiredIndex):
+            return
 
-    textable.configure(text = value[:counter])
-    
-    try:
-        if textable.is_chat_bubble == True:
-            app.mainWindow.messagesWindow.move_to_bottom()
-            is_type_writing_response = True
-    except:
-        pass
-            
-    if counter < len(value):
-        app.after(6, lambda: _typewriter_help(textable, value, requiredIndex, counter + 1))
-    else:
+        textable.configure(text = value[:counter])
+        
         try:
             if textable.is_chat_bubble == True:
-                is_type_writing_response = False
+                app.mainWindow.messagesWindow.move_to_bottom()
+                is_type_writing_response = True
         except:
             pass
+                
+        if counter < len(value):
+            app.after(6, lambda: _typewriter_help(textable, value, requiredIndex, counter + 1))
+        else:
+            try:
+                if textable.is_chat_bubble == True:
+                    is_type_writing_response = False
+            except:
+                pass
+    except:
+        is_type_writing_response = False
 
 
 def typewriter(textable, value):
@@ -107,16 +111,16 @@ def is_empty_string(string):
 
 
 class ConfirmDialog(ctk.CTkToplevel):
-    def __init__(self, confirmText, callback):
+    def __init__(self, titleText, confirmText, callback):
         super().__init__(app)
-        self.title("Confirm Delete")
+        self.title(titleText)
         self.transient(app)
         self.grab_set()
 
         self.result = None
         self.callback = callback
 
-        message_label = ctk.CTkLabel(self, text=confirmText)
+        message_label = ctk.CTkLabel(self, text=confirmText, wraplength=300)
         message_label.pack(padx=20, pady=20)
 
         button_frame = ctk.CTkFrame(self, fg_color="transparent")
@@ -160,7 +164,7 @@ class Sidebar(ctk.CTkScrollableFrame):
         )
         
         itemsLen = len(self.items)
-        chatButton.grid(row = itemsLen, column = 0, padx = 0, pady = (0, 10), sticky = "nwe")
+        chatButton.grid(row = itemsLen, column = 0, padx = 0, pady = (0, 5), sticky = "nwe")
         self.items.append(chatButton)
         
         removeButton = ctk.CTkButton(
@@ -182,7 +186,7 @@ class Sidebar(ctk.CTkScrollableFrame):
             else:
                 print("User doesn't want to delete window!")
 
-        app.wait_window(ConfirmDialog("Are you sure you want to delete this save?", delete_callback))
+        app.wait_window(ConfirmDialog("Confirm Delete", "Are you sure you want to delete this save?", delete_callback))
     
     def remove(self, chatInfo, button):
         button.destroy()
@@ -239,7 +243,7 @@ class ChatBubble(ctk.CTkFrame):
             pady = 10,
             font = (ctk.CTkFont, 13),
             corner_radius = 8,
-            wraplength = 1070,  
+            wraplength = 750,  
             justify = justify,  
             anchor = anchor,
             text = "",
@@ -287,6 +291,9 @@ class MessagesWindow(ctk.CTkFrame):
 
         self.scrollable_frame.bind("<Configure>", self.on_frame_configure)
         self.canvas.bind_all("<MouseWheel>", self.on_mousewheel)
+        
+        empty_content = ctk.CTkFrame(self.scrollable_frame, bg_color="transparent", height = 0, width = parent.winfo_width() - 300)
+        empty_content.pack(side = "top", fill = "both", expand = True)
 
         self.messages = []
     
@@ -343,7 +350,7 @@ class MainWindow(ctk.CTkFrame):
         
         startAdventureButton = ctk.CTkButton(
             self, 
-            text = "Start New Adventure",
+            text = "Begin New Adventure",
             command = lambda: app.newChat()
         )
         # startAdventureButton.grid(column = 1, row = 1)
@@ -462,6 +469,7 @@ class NewJourneyWindow(ctk.CTkToplevel):
         # Text box for naming the journey
         self.entry_name = ctk.CTkEntry(self)
         self.entry_name.pack(pady=5)
+        self.entry_name.focus_force()
 
         # Label for additional context
         label_context = ctk.CTkLabel(self, text="Additional context (optional, leave blank for random plot):")
@@ -489,9 +497,9 @@ class NewJourneyWindow(ctk.CTkToplevel):
         newStoryDescription = str(self.entry_context.get())
         newMessages = copy.deepcopy(deafult_messages)
         hasAdditionalContext = False
-        additionalContext = "The user has provided additional context on story. If these strings are empty, ignore them."
+        additionalContext = " The user has provided additional context on story. If these strings are empty, ignore them."
 
-        if not is_empty_string(newStoryDescription):
+        if not is_empty_string(newChatName):
             hasAdditionalContext = True
             additionalContext += f" Name of story: \"{newChatName}\"."
 
@@ -509,6 +517,8 @@ class NewJourneyWindow(ctk.CTkToplevel):
             "savedTime": time.time(),
             "messages": newMessages
         }
+        
+        print(chatInfo)
 
         app.loadChat(chatInfo)
         app.saveChat(chatInfo["name"])
@@ -564,7 +574,7 @@ class App(ctk.CTk):
                 mock_data = True
 
         if not mock_data:
-            ConfirmDialog("Mock data is disabled, are you sure you want to proceed?", self.mock_data_result)
+            ConfirmDialog("API usage warning!", "Mock data is disabled, are you sure you want to proceed?", self.mock_data_result)
 
 
     def makeCompletion(self):
@@ -578,18 +588,48 @@ class App(ctk.CTk):
         def fetch_openai_response():
             global is_querying
             response = None
+            
+            messageInfo = {
+                "role": "assistant",
+                "content": "loading..."
+            }
+            
+            responseMessage = self.mainWindow.messagesWindow.add_message(messageInfo)
+            app.mainWindow.messagesWindow.move_to_bottom()
+            
+            def dot(currentText = "."):
+                if response != None:
+                    return
 
+                responseMessage.setText("Determining your fate" + currentText)
+                
+                if currentText == ".":
+                    currentText = ".."
+                elif currentText == "..":
+                    currentText = "..."
+                elif currentText == "...":
+                    currentText = "."
+                
+                app.after(250, lambda: dot(currentText))
+
+            dot()
+            
             if mock_data:
+                time.sleep(3)
                 response = mockResponsesDB[random.randint(0, len(mockResponsesDB) - 1)]
             else:
-                response = openai.ChatCompletion.create(
-                    model=MODEL,
-                    messages=messages,
-                    temperature=0.7,
-                    max_tokens=1024,
-                    stop=None,
-                    top_p=0.8,
-                )
+                try:
+                    response = openai.ChatCompletion.create(
+                        model=MODEL,
+                        messages=messages,
+                        temperature=0.7,
+                        max_tokens=1024,
+                        stop=None,
+                        top_p=0.8,
+                    )
+                except Exception as e:
+                    print("There was an error! " + repr(e))
+                    ConfirmDialog("Runtime Error", "There was an exception getting a response from OpenAI: " + repr(e), lambda x: True)
 
                 print("APIResponse: \n" + str(response))
 
@@ -602,13 +642,9 @@ class App(ctk.CTk):
             sessionInfo["tokenUsage"]["outbound"] += response["usage"]["prompt_tokens"]
             sessionInfo["tokenUsage"]["inbound"] += response["usage"]["completion_tokens"]
 
-            messageInfo = {
-                "role": "assistant",
-                "content": response["choices"][0]["message"]["content"]
-            }
-
-            responseMessage = self.newMessage(messageInfo)
+            messageInfo["content"] = response["choices"][0]["message"]["content"]
             responseMessage.animateText(messageInfo["content"])
+            messages.append(messageInfo)
 
             is_querying = False
             app.saveChat(currentChatName)
@@ -669,7 +705,7 @@ class App(ctk.CTk):
 
         chatName = chatName if chatName else ctk.CTkInputDialog(text = "Name your chat", title = "Save Chat").get_input()
         
-        if chatName != None:
+        if not is_empty_string(chatName):
             chatName = str(chatName)
             currentChatName = chatName
             chatinfo = {
