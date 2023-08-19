@@ -54,7 +54,7 @@ currentChatName = sessionId
 deafult_messages = [
     {
         "role" : "system",
-        "content" : "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable!",
+        "content" : "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! You are NOT a chat assistant, you are only the logic behind the game; please treat each and every message from the user as an action",
     },
 ]
 
@@ -243,11 +243,12 @@ class ChatBubble(ctk.CTkFrame):
             pady = 10,
             font = (ctk.CTkFont, 13),
             corner_radius = 8,
-            wraplength = 750,  
+            wraplength = 1070,  
             justify = justify,  
             anchor = anchor,
             text = "",
         )
+
         mainLabel.grid(column = column, row = 1, sticky = sticky)
         mainLabel.is_chat_bubble = True
 
@@ -292,8 +293,9 @@ class MessagesWindow(ctk.CTkFrame):
         self.scrollable_frame.bind("<Configure>", self.on_frame_configure)
         self.canvas.bind_all("<MouseWheel>", self.on_mousewheel)
         
-        empty_content = ctk.CTkFrame(self.scrollable_frame, bg_color="transparent", height = 0, width = parent.winfo_width() - 300)
-        empty_content.pack(side = "top", fill = "both", expand = True)
+        # print(parent.winfo_width())
+        # empty_content = ctk.CTkFrame(self.scrollable_frame, bg_color="transparent", height = 0, width = parent.winfo_width() - 150)
+        # empty_content.pack(side = "top", fill = "both", expand = True)
 
         self.messages = []
     
