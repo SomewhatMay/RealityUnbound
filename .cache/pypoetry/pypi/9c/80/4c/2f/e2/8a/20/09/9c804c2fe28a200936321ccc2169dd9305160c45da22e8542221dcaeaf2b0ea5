@@ -1,0 +1,1 @@
+9999999999{"name": "pickle5", "version": "0.0.12", "summary": "Backport of the pickle 5 protocol (PEP 574) and other pickle changes", "platform": "", "requires_dist": null, "requires_python": ">=3.5, <3.8", "files": [], "_cache_version": "1.0.0"}

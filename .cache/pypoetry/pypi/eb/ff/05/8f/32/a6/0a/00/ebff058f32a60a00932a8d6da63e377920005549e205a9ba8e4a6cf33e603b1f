@@ -1,0 +1,1 @@
+9999999999{"name": "fastpbkdf2", "version": "0.2", "summary": "A faster implementation of PBKDF2", "platform": "", "requires_dist": ["cffi>=1.1", "six>=1.4.1"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

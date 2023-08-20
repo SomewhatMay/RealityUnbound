@@ -1,0 +1,1 @@
+9999999999{"name": "monotonic", "version": "1.6", "summary": "An implementation of time.monotonic() for Python 2 & < 3.3", "platform": "", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

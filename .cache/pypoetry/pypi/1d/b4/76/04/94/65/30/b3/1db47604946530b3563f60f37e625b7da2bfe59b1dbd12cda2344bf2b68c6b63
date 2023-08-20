@@ -1,0 +1,1 @@
+9999999999{"name": "numpy", "version": "1.25.1", "summary": "Fundamental package for array computing in Python", "platform": "Windows", "requires_dist": null, "requires_python": ">=3.9", "files": [], "_cache_version": "1.0.0"}

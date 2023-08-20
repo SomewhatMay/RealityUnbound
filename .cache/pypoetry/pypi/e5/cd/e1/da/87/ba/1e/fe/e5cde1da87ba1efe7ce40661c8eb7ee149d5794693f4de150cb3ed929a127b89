@@ -1,0 +1,1 @@
+9999999999{"name": "distorm3", "version": "3.5.2", "summary": "The goal of diStorm3 is to decode x86/AMD64 binary streams and return a structure that describes each instruction.", "platform": "cygwin", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

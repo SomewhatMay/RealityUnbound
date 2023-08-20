@@ -1,0 +1,1 @@
+9999999999{"name": "rfc3987", "version": "1.3.8", "summary": "Parsing and validation of URIs (RFC 3986) and IRIs (RFC 3987)", "platform": "", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

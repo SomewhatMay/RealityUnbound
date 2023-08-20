@@ -1,0 +1,1 @@
+9999999999{"name": "poetry-core", "version": "1.6.1", "summary": "Poetry PEP 517 Build Backend", "platform": null, "requires_dist": ["importlib-metadata (>=1.7.0) ; python_version < \"3.8\""], "requires_python": ">=3.7,<4.0", "files": [], "_cache_version": "1.0.0"}

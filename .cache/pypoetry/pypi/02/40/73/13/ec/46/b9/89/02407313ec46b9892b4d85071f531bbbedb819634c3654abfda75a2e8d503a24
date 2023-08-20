@@ -1,0 +1,1 @@
+9999999999{"name": "rapidfuzz", "version": "2.15.1", "summary": "rapid fuzzy string matching", "platform": null, "requires_dist": ["numpy ; extra == 'full'"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

@@ -1,0 +1,1 @@
+9999999999{"name": "xattr", "version": "0.10.1", "summary": "Python wrapper for extended filesystem attributes", "platform": "MacOS X", "requires_dist": ["cffi (>=1.0)"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

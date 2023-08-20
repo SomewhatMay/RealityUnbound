@@ -1,0 +1,1 @@
+9999999999{"name": "idna_ssl", "version": "1.1.0", "summary": "Patch ssl.match_hostname for Unicode(idna) domains support", "platform": "", "requires_dist": ["idna>=2.0"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

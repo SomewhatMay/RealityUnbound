@@ -1,0 +1,1 @@
+9999999999{"name": "numpydoc", "version": "1.5.0", "summary": "Sphinx extension to support docstrings in Numpy format", "platform": null, "requires_dist": ["sphinx (>=4.2)", "Jinja2 (>=2.10)", "pytest ; extra == 'testing'", "pytest-cov ; extra == 'testing'", "matplotlib ; extra == 'testing'"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

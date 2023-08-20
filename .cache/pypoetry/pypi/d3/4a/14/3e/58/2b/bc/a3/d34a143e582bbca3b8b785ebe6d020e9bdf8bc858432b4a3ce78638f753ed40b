@@ -1,0 +1,1 @@
+9999999999{"name": "GenAPI", "version": "0.0.8", "summary": "A Python API for the Genesis platform.", "platform": "UNKNOWN", "requires_dist": ["requests-toolbelt>=0.3.0", "slumber>=0.6.0", "requests>=2.3.0", "six"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}
