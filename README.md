@@ -1,5 +1,5 @@
 # Setup 📦
-Downloading is easy, just follow the steps:
+For some reason, Replit is causing issues with displaying window popups (save chat window, new chat window, etc); **I highly suggest running this locally.** Setup is easy, just follow the steps:
 1. Ensure that you have Python (v3.11.4) installed
 2. Fork and clone the repository
 3. Run the following command to install all libraries
