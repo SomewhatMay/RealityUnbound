@@ -1,0 +1,1 @@
+9999999999{"name": "jsonschema-specifications", "version": "2023.6.1", "summary": "The JSON Schema meta-schemas and vocabularies, exposed as a Registry", "platform": null, "requires_dist": ["importlib-resources>=1.4.0; python_version < '3.9'", "referencing>=0.28.0"], "requires_python": ">=3.8", "files": [], "_cache_version": "1.0.0"}

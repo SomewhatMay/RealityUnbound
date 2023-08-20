@@ -1,0 +1,1 @@
+9999999999{"name": "aiohttp-retry", "version": "2.8.3", "summary": "Simple retry client for aiohttp", "platform": "any", "requires_dist": ["aiohttp"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

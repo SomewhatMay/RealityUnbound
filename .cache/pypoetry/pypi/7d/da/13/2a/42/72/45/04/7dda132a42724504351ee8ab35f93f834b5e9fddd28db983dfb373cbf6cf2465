@@ -1,0 +1,1 @@
+9999999999{"name": "aiodns", "version": "3.0.0", "summary": "Simple DNS resolver for asyncio", "platform": "POSIX", "requires_dist": ["pycares (>=4.0.0)"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}
