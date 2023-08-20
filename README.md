@@ -20,7 +20,7 @@ Setup is easy, just follow the steps:
         return "sk-..." # Enter your token in the string
     ```
     *If this step is omitted, it will prompt for a token once the app is launched. The entered token is stored locally only for the duration of the session*
-6. Run main.py:
+7. Open cmd and change the directory to the repository folder, then run main.py using:
     ```
     $python main.py
     ```
