@@ -2,3 +2,5 @@ test.py
 tokens.py
 old.py
 *.pyc
+__pycache__
+.cache
