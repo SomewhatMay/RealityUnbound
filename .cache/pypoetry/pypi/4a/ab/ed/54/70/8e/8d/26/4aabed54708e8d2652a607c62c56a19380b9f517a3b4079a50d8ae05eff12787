@@ -1,0 +1,1 @@
+9999999999{"name": "stacklessemu", "version": "0.1", "summary": "A quick lightweight psuedo-installation of a subset of Stackless Python functionality.", "platform": "UNKNOWN", "requires_dist": ["greenlet"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

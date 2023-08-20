@@ -1,15 +1,4 @@
-import openai
-from pathlib import Path
-import threading
-import customtkinter as ctk
-import tkinter as tk
-from PIL import Image, ImageTk
-import atexit
-import uuid
-import json
-import random
-import copy
-import time
+import sys
 
 # Variables you my change
 mock_data = False

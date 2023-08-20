@@ -1,0 +1,1 @@
+9999999999{"name": "glob2", "version": "0.7", "summary": "Version of the glob module that can capture patterns and supports recursive wildcards", "platform": "", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

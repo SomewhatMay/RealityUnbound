@@ -1,0 +1,1 @@
+9999999999{"name": "pyproject_hooks", "version": "1.0.0", "summary": "Wrappers to call pyproject.toml-based build backend hooks.", "platform": null, "requires_dist": ["tomli >=1.1.0 ; python_version<'3.11'"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

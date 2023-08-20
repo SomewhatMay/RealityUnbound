@@ -1,0 +1,1 @@
+9999999999{"name": "rpds-py", "version": "0.8.11", "summary": "Python bindings to Rust's persistent data structures (rpds)", "platform": null, "requires_dist": null, "requires_python": ">=3.8", "files": [], "_cache_version": "1.0.0"}

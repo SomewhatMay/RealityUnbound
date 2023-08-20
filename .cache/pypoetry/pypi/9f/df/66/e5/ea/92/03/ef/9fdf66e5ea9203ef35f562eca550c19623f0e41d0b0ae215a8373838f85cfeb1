@@ -1,0 +1,1 @@
+9999999999{"name": "PyQt5", "version": "5.15.9", "summary": "Python bindings for the Qt cross platform application toolkit", "platform": null, "requires_dist": ["PyQt5-sip (>=12.11, <13)", "PyQt5-Qt5 (>=5.15.2)"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}
