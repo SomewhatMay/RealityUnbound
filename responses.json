@@ -1,7 +1,7 @@
 {
     "tokenUsage": {
-        "outbound": 3375,
-        "inbound": 597
+        "outbound": 30773,
+        "inbound": 8248
     },
     "sessions": {
         "session-adad8d7e-2bc5-441d-9191-a85cc797df11": {
@@ -144,6 +144,1844 @@
                         "total_tokens": 929
                     }
                 }
+            ]
+        },
+        "session-7fa9bf41-574c-4a7d-8b92-10f45f6866f9": {
+            "tokenUsage": {
+                "outbound": 1505,
+                "inbound": 254
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIhyIJpMeseMdFHru7665rOulYFt",
+                    "object": "chat.completion",
+                    "created": 1692460998,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Quest for Free Food\"! In this game, you'll embark on a journey to find and enjoy delicious free food. Along the way, you'll encounter various challenges and make choices that will determine your success. Are you ready to begin your quest for free food?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 293,
+                        "completion_tokens": 57,
+                        "total_tokens": 350
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIiDSdOYvRLwPcondRhScmtcNC6S",
+                    "object": "chat.completion",
+                    "created": 1692461013,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Alright, no problem! If you change your mind, feel free to come back and start the game whenever you're ready. Have a great day!"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 359,
+                        "completion_tokens": 30,
+                        "total_tokens": 389
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIiNovqoOZI8CaiTrHz2hreoZ3Vk",
+                    "object": "chat.completion",
+                    "created": 1692461023,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "I apologize for any confusion. \"The Quest for Free Food\" is a text-based adventure game where you make choices to progress through the story. Your goal is to find and enjoy free food. Would you like to start the game now?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 398,
+                        "completion_tokens": 48,
+                        "total_tokens": 446
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                }
+            ]
+        },
+        "session-d47b502b-8a55-493f-b9a9-b35818e66e3d": {
+            "tokenUsage": {
+                "outbound": 528,
+                "inbound": 209
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pJTbnu11JTqWlCTOA6HNpTyEk3ok",
+                    "object": "chat.completion",
+                    "created": 1692463951,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost City\"! In this text-based adventure game, you will embark on a thrilling journey to discover a hidden city deep within the jungle. Your choices will determine the outcome of the story, so choose wisely! Let's begin.\n\nYou find yourself standing at the entrance of a dense jungle. The air is thick with humidity, and the sounds of exotic birds fill your ears. The path ahead splits into two. One path appears well-trodden, while the other is overgrown with vegetation. What do you do?\n1. Take the well-trodden path.\n2. Venture into the overgrown path.\n3. Take a moment to observe the surroundings before deciding.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 264,
+                        "completion_tokens": 147,
+                        "total_tokens": 411
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJTywEGOnfbNAvxWpZSk1KqhWgKM",
+                    "object": "chat.completion",
+                    "created": 1692463974,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you embark on a journey to discover the secrets of a mysterious temple. As you explore, you will encounter various challenges and make choices that will determine your fate. Choose wisely, as your decisions may have unexpected consequences. Are you ready to begin your adventure?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 264,
+                        "completion_tokens": 62,
+                        "total_tokens": 326
+                    }
+                }
+            ]
+        },
+        "session-d7058f55-ea50-4aa8-96a4-0f688abb18ab": {
+            "tokenUsage": {
+                "outbound": 267,
+                "inbound": 91
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pJXFYKPUIM2NgWtNNzvDKdib3TR1",
+                    "object": "chat.completion",
+                    "created": 1692464177,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in an ancient dungeon with no memory of how you got there. Your goal is to escape the dungeon by making choices and solving puzzles. Be careful, as danger lurks around every corner. Good luck!\n\nWhat would you like to do?\n1. Look around for any clues.\n2. Try to find a way out.\n3. Call for help.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 267,
+                        "completion_tokens": 91,
+                        "total_tokens": 358
+                    }
+                }
+            ]
+        },
+        "session-33fde1bd-3639-433f-8169-68fdb1e2d701": {
+            "tokenUsage": {
+                "outbound": 2335,
+                "inbound": 405
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pJZVOd3Ul4ZZpH9ecbfyW9XINNM9",
+                    "object": "chat.completion",
+                    "created": 1692464317,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple\"! You find yourself in a mysterious ancient temple deep in the heart of the jungle. As you enter the temple, you notice a dimly lit corridor ahead. What would you like to do?\n\n1. Proceed cautiously down the corridor.\n2. Use a torch to light up the corridor.\n3. Look for any hidden traps or mechanisms.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 83,
+                        "total_tokens": 354
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJZt1ceUOITUDZZqUslDKDHOSiND",
+                    "object": "chat.completion",
+                    "created": 1692464341,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You carefully examine the corridor for any hidden traps or mechanisms. As you inspect the walls and floor, you notice a faint pressure plate near your feet. What would you like to do?\n\n1. Step around the pressure plate and continue down the corridor.\n2. Attempt to disarm the pressure plate.\n3. Trigger the pressure plate intentionally to see what happens.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 79,
+                        "total_tokens": 442
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJaULbgjycc0dvvBfY9Gj5xR0ixO",
+                    "object": "chat.completion",
+                    "created": 1692464378,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You decide to turn back and head back to the village. As you make your way out of the temple, you hear a loud rumbling sound behind you. Suddenly, the entrance collapses, blocking your path. You are trapped inside the temple. What would you like to do?\n\n1. Look for another way out within the temple.\n2. Try to dig your way out through the collapsed entrance.\n3. Explore further into the temple to search for an alternative exit.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 102,
+                        "total_tokens": 557
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJbeRwYCXdmWdPsiHs8k20BcBVpc",
+                    "object": "chat.completion",
+                    "created": 1692464450,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You attempt to teleport back to the village, but nothing happens. It seems that the magic within the temple is preventing any sort of teleportation. You are still trapped inside the temple. What would you like to do?\n\n1. Look for another way out within the temple.\n2. Try to dig your way out through the collapsed entrance.\n3. Explore further into the temple to search for an alternative exit.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 570,
+                        "completion_tokens": 90,
+                        "total_tokens": 660
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJbx4zft7Bt9ssg2Fj9DAopBXoFi",
+                    "object": "chat.completion",
+                    "created": 1692464469,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You concentrate and attempt to phase through the rocks to the village. As you focus your energy, you feel a surge of power, and suddenly, you find yourself standing outside the temple, back in the village. Congratulations, you have successfully escaped the temple!"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 676,
+                        "completion_tokens": 51,
+                        "total_tokens": 727
+                    }
+                }
+            ]
+        },
+        "session-8ed427fa-784c-4cb8-9738-1b753a098338": {
+            "tokenUsage": {
+                "outbound": 846,
+                "inbound": 553
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIhyIJpMeseMdFHru7665rOulYFt",
+                    "object": "chat.completion",
+                    "created": 1692460998,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Quest for Free Food\"! In this game, you'll embark on a journey to find and enjoy delicious free food. Along the way, you'll encounter various challenges and make choices that will determine your success. Are you ready to begin your quest for free food?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 293,
+                        "completion_tokens": 57,
+                        "total_tokens": 350
+                    }
+                },
+                {
+                    "id": "chatcmpl-DEF456UVW789",
+                    "object": "chat.completion",
+                    "created": 1692241000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You choose the left path and find yourself in a dimly lit chamber. There, you discover a chest. As you approach it, the ground trembles, and the chest transforms into a Mimic\u00e2\u20ac\u201da creature that mimics objects to trap unsuspecting adventurers! It lunges at you, its sharp teeth gnashing. What's your move?\n\n1. Draw your weapon and fight the Mimic.\n2. Try to reason with the Mimic, hoping to avoid a fight.\n3. Dodge to the side and attempt to flee from the chamber.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 89,
+                        "completion_tokens": 187,
+                        "total_tokens": 276
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8JfIHXhEf1su170s33eUuKHKkbQ",
+                    "object": "chat.completion",
+                    "created": 1692421051,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck! \n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 113,
+                        "total_tokens": 476
+                    }
+                },
+                {
+                    "id": "chatcmpl-STU901VWX234",
+                    "object": "chat.completion",
+                    "created": 1692244000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You stroll through Oakhaven's cobblestone streets, engaging in conversation with the villagers. You learn of a hidden cave said to hold valuable treasures. The village blacksmith, Gruffin, offers you a rusty key that might unlock its entrance. What's your next move?\n\n1. Accept the rusty key and head to the cave.\n2. Thank the blacksmith and continue exploring the village.\n3. Inquire about the cave's dangers with other villagers.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 101,
+                        "completion_tokens": 196,
+                        "total_tokens": 297
+                    }
+                }
+            ]
+        },
+        "session-8ff98bd4-60b3-41ea-801e-f6422ac910bd": {
+            "tokenUsage": {
+                "outbound": 1372,
+                "inbound": 460
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIhyIJpMeseMdFHru7665rOulYFt",
+                    "object": "chat.completion",
+                    "created": 1692460998,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Quest for Free Food\"! In this game, you'll embark on a journey to find and enjoy delicious free food. Along the way, you'll encounter various challenges and make choices that will determine your success. Are you ready to begin your quest for free food?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 293,
+                        "completion_tokens": 57,
+                        "total_tokens": 350
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIhyIJpMeseMdFHru7665rOulYFt",
+                    "object": "chat.completion",
+                    "created": 1692460998,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Quest for Free Food\"! In this game, you'll embark on a journey to find and enjoy delicious free food. Along the way, you'll encounter various challenges and make choices that will determine your success. Are you ready to begin your quest for free food?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 293,
+                        "completion_tokens": 57,
+                        "total_tokens": 350
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJZVOd3Ul4ZZpH9ecbfyW9XINNM9",
+                    "object": "chat.completion",
+                    "created": 1692464317,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple\"! You find yourself in a mysterious ancient temple deep in the heart of the jungle. As you enter the temple, you notice a dimly lit corridor ahead. What would you like to do?\n\n1. Proceed cautiously down the corridor.\n2. Use a torch to light up the corridor.\n3. Look for any hidden traps or mechanisms.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 83,
+                        "total_tokens": 354
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                },
+                {
+                    "id": "chatcmpl-ABC123XYZ456",
+                    "object": "chat.completion",
+                    "created": 1692240000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"Echoes of Destiny,\" a text-based adventure where your choices shape the story. You are Nara, an aspiring adventurer in the land of Eldoria. Your journey begins in the tranquil village of Oakhaven. Your choices will determine your fate. What would you like to do?\n\n1. Explore the village and talk to the villagers.\n2. Visit the local tavern to gather rumors.\n3. Head to the village marketplace.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 60,
+                        "completion_tokens": 144,
+                        "total_tokens": 204
+                    }
+                }
+            ]
+        },
+        "session-0b9ebc48-653a-4003-aba9-1be8fa393770": {
+            "tokenUsage": {
+                "outbound": 592,
+                "inbound": 389
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-GHI789JKL012",
+                    "object": "chat.completion",
+                    "created": 1692242000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Confident in your abilities, you make your way to the cave's entrance. The rusty key fits, and you step into the darkness. Inside, you encounter a swarm of aggressive bats. You manage to fend them off, but not without sustaining some injuries. Deeper into the cave, you stumble upon a forked path. Which way do you go?\n\n1. Take the path that leads downward.\n2. Take the path that leads to the right.\n3. Take the path that leads to the left.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 93,
+                        "completion_tokens": 184,
+                        "total_tokens": 277
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pAAZBnYOwIRVspHY9V9PmPNRuixe",
+                    "object": "chat.completion",
+                    "created": 1692428175,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Forgotten Dungeon\"! In this text-based adventure game, you find yourself trapped in a mysterious dungeon with no memory of how you got there. Your goal is to explore, solve puzzles, and make choices that will lead you to escape. Be careful though, as your choices may have unexpected consequences. Good luck! \n\nYou wake up in a dimly lit cell, your head pounding. As you try to gather your thoughts, you notice a rusty key on the floor. What would you like to do?\n\n1. Pick up the rusty key.\n2. Look around the cell for any other clues.\n3. Try to remember how you ended up here.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 235,
+                        "completion_tokens": 143,
+                        "total_tokens": 378
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJTywEGOnfbNAvxWpZSk1KqhWgKM",
+                    "object": "chat.completion",
+                    "created": 1692463974,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you embark on a journey to discover the secrets of a mysterious temple. As you explore, you will encounter various challenges and make choices that will determine your fate. Choose wisely, as your decisions may have unexpected consequences. Are you ready to begin your adventure?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 264,
+                        "completion_tokens": 62,
+                        "total_tokens": 326
+                    }
+                },
+                null
+            ]
+        },
+        "session-ea8021bb-2f1e-4d96-b85b-7babaae1ffd1": {
+            "tokenUsage": {
+                "outbound": 455,
+                "inbound": 119
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                },
+                null
+            ]
+        },
+        "session-51ee5f53-6288-40e0-8cf0-4dcc4eefef3f": {
+            "tokenUsage": {
+                "outbound": 2545,
+                "inbound": 546
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pAJKUUJ927HJsw1l1MC9uvoPY8mr",
+                    "object": "chat.completion",
+                    "created": 1692428718,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Feeling a sense of weariness, you decide to continue on your journey, ignoring the cave for now. As you walk further, you come across a small village nestled amidst lush greenery. The villagers seem troubled and are whispering among themselves. What would you like to do?\n1. Approach the villagers and ask what's wrong.\n2. Explore the village discreetly to gather information.\n3. Continue on your way without getting involved.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 703,
+                        "completion_tokens": 94,
+                        "total_tokens": 797
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8JfIHXhEf1su170s33eUuKHKkbQ",
+                    "object": "chat.completion",
+                    "created": 1692421051,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck! \n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 113,
+                        "total_tokens": 476
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8KiMOrn8C4DN5XHJNtwvY1WRJbD",
+                    "object": "chat.completion",
+                    "created": 1692421116,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "No problem! Take your time to think it over. Remember, your choices will have consequences, so choose wisely."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 486,
+                        "completion_tokens": 23,
+                        "total_tokens": 509
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8JfIHXhEf1su170s33eUuKHKkbQ",
+                    "object": "chat.completion",
+                    "created": 1692421051,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck! \n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 113,
+                        "total_tokens": 476
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJXFYKPUIM2NgWtNNzvDKdib3TR1",
+                    "object": "chat.completion",
+                    "created": 1692464177,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in an ancient dungeon with no memory of how you got there. Your goal is to escape the dungeon by making choices and solving puzzles. Be careful, as danger lurks around every corner. Good luck!\n\nWhat would you like to do?\n1. Look around for any clues.\n2. Try to find a way out.\n3. Call for help.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 267,
+                        "completion_tokens": 91,
+                        "total_tokens": 358
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8KDUw49GosIjElsvZBAOmzJhlsZ",
+                    "object": "chat.completion",
+                    "created": 1692421085,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 112,
+                        "total_tokens": 475
+                    }
+                }
+            ]
+        },
+        "session-9bf38359-5e98-47dd-8956-68b9adbcbe64": {
+            "tokenUsage": {
+                "outbound": 1081,
+                "inbound": 238
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pAImeQKQ1tn00KbyRclpFULxbvpb",
+                    "object": "chat.completion",
+                    "created": 1692428684,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "I'm sorry, but \"Hearts of the Sky\" is a fantasy adventure game and does not offer the option to be a Barbie. However, if you'd like to embark on an epic quest as a hero, I can provide you with options to progress in the game. Let me know if you're interested."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 543,
+                        "completion_tokens": 64,
+                        "total_tokens": 607
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJXFYKPUIM2NgWtNNzvDKdib3TR1",
+                    "object": "chat.completion",
+                    "created": 1692464177,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in an ancient dungeon with no memory of how you got there. Your goal is to escape the dungeon by making choices and solving puzzles. Be careful, as danger lurks around every corner. Good luck!\n\nWhat would you like to do?\n1. Look around for any clues.\n2. Try to find a way out.\n3. Call for help.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 267,
+                        "completion_tokens": 91,
+                        "total_tokens": 358
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJZVOd3Ul4ZZpH9ecbfyW9XINNM9",
+                    "object": "chat.completion",
+                    "created": 1692464317,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple\"! You find yourself in a mysterious ancient temple deep in the heart of the jungle. As you enter the temple, you notice a dimly lit corridor ahead. What would you like to do?\n\n1. Proceed cautiously down the corridor.\n2. Use a torch to light up the corridor.\n3. Look for any hidden traps or mechanisms.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 83,
+                        "total_tokens": 354
+                    }
+                }
+            ]
+        },
+        "session-0bb738f3-f452-4653-9078-b06010ef7fa2": {
+            "tokenUsage": {
+                "outbound": 267,
+                "inbound": 91
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pJXFYKPUIM2NgWtNNzvDKdib3TR1",
+                    "object": "chat.completion",
+                    "created": 1692464177,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in an ancient dungeon with no memory of how you got there. Your goal is to escape the dungeon by making choices and solving puzzles. Be careful, as danger lurks around every corner. Good luck!\n\nWhat would you like to do?\n1. Look around for any clues.\n2. Try to find a way out.\n3. Call for help.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 267,
+                        "completion_tokens": 91,
+                        "total_tokens": 358
+                    }
+                }
+            ]
+        },
+        "session-d9abf603-a3a9-4d1d-802b-eacea79ad785": {
+            "tokenUsage": {
+                "outbound": 455,
+                "inbound": 119
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                }
+            ]
+        },
+        "session-339c70b2-850b-4ea8-ab0e-f740ddba77c0": {
+            "tokenUsage": {
+                "outbound": 363,
+                "inbound": 112
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7p8qr6aLVG81vjrCXq8LsLaA53ZfH",
+                    "object": "chat.completion",
+                    "created": 1692423109,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 112,
+                        "total_tokens": 475
+                    }
+                }
+            ]
+        },
+        "session-1bc4cab3-dd0f-4d20-a2a0-2221306fb29d": {
+            "tokenUsage": {
+                "outbound": 600,
+                "inbound": 493
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pAAZBnYOwIRVspHY9V9PmPNRuixe",
+                    "object": "chat.completion",
+                    "created": 1692428175,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Forgotten Dungeon\"! In this text-based adventure game, you find yourself trapped in a mysterious dungeon with no memory of how you got there. Your goal is to explore, solve puzzles, and make choices that will lead you to escape. Be careful though, as your choices may have unexpected consequences. Good luck! \n\nYou wake up in a dimly lit cell, your head pounding. As you try to gather your thoughts, you notice a rusty key on the floor. What would you like to do?\n\n1. Pick up the rusty key.\n2. Look around the cell for any other clues.\n3. Try to remember how you ended up here.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 235,
+                        "completion_tokens": 143,
+                        "total_tokens": 378
+                    }
+                },
+                {
+                    "id": "chatcmpl-STU901VWX234",
+                    "object": "chat.completion",
+                    "created": 1692244000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You stroll through Oakhaven's cobblestone streets, engaging in conversation with the villagers. You learn of a hidden cave said to hold valuable treasures. The village blacksmith, Gruffin, offers you a rusty key that might unlock its entrance. What's your next move?\n\n1. Accept the rusty key and head to the cave.\n2. Thank the blacksmith and continue exploring the village.\n3. Inquire about the cave's dangers with other villagers.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 101,
+                        "completion_tokens": 196,
+                        "total_tokens": 297
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pAHfcyJWaTFkL9VOOYDEB3i8ASgM",
+                    "object": "chat.completion",
+                    "created": 1692428615,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"Hearts of the Sky,\" an epic fantasy adventure game set in a world filled with magic and danger. You play as a young hero who embarks on a quest to save their kingdom from an ancient evil. Along the way, you will face challenging puzzles, make crucial choices, and engage in thrilling battles. Your decisions will shape the outcome of the story, so choose wisely. Good luck, brave hero!\n\nYou find yourself standing at the entrance of a mysterious cave. The air is thick with an eerie silence, and a faint glow emanates from within. What would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 264,
+                        "completion_tokens": 154,
+                        "total_tokens": 418
+                    }
+                },
+                null
+            ]
+        },
+        "session-e155132c-b0e1-4acf-84ca-e1154d738355": {
+            "tokenUsage": {
+                "outbound": 950,
+                "inbound": 331
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-STU901VWX234",
+                    "object": "chat.completion",
+                    "created": 1692244000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You stroll through Oakhaven's cobblestone streets, engaging in conversation with the villagers. You learn of a hidden cave said to hold valuable treasures. The village blacksmith, Gruffin, offers you a rusty key that might unlock its entrance. What's your next move?\n\n1. Accept the rusty key and head to the cave.\n2. Thank the blacksmith and continue exploring the village.\n3. Inquire about the cave's dangers with other villagers.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 101,
+                        "completion_tokens": 196,
+                        "total_tokens": 297
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8KiMOrn8C4DN5XHJNtwvY1WRJbD",
+                    "object": "chat.completion",
+                    "created": 1692421116,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "No problem! Take your time to think it over. Remember, your choices will have consequences, so choose wisely."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 486,
+                        "completion_tokens": 23,
+                        "total_tokens": 509
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8KDUw49GosIjElsvZBAOmzJhlsZ",
+                    "object": "chat.completion",
+                    "created": 1692421085,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 112,
+                        "total_tokens": 475
+                    }
+                }
+            ]
+        },
+        "session-7d5407de-d3de-419e-a19f-3603ecf21e4a": {
+            "tokenUsage": {
+                "outbound": 830,
+                "inbound": 561
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pAAZBnYOwIRVspHY9V9PmPNRuixe",
+                    "object": "chat.completion",
+                    "created": 1692428175,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Forgotten Dungeon\"! In this text-based adventure game, you find yourself trapped in a mysterious dungeon with no memory of how you got there. Your goal is to explore, solve puzzles, and make choices that will lead you to escape. Be careful though, as your choices may have unexpected consequences. Good luck! \n\nYou wake up in a dimly lit cell, your head pounding. As you try to gather your thoughts, you notice a rusty key on the floor. What would you like to do?\n\n1. Pick up the rusty key.\n2. Look around the cell for any other clues.\n3. Try to remember how you ended up here.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 235,
+                        "completion_tokens": 143,
+                        "total_tokens": 378
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pJXFYKPUIM2NgWtNNzvDKdib3TR1",
+                    "object": "chat.completion",
+                    "created": 1692464177,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in an ancient dungeon with no memory of how you got there. Your goal is to escape the dungeon by making choices and solving puzzles. Be careful, as danger lurks around every corner. Good luck!\n\nWhat would you like to do?\n1. Look around for any clues.\n2. Try to find a way out.\n3. Call for help.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 267,
+                        "completion_tokens": 91,
+                        "total_tokens": 358
+                    }
+                },
+                {
+                    "id": "chatcmpl-GHI789JKL012",
+                    "object": "chat.completion",
+                    "created": 1692242000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Confident in your abilities, you make your way to the cave's entrance. The rusty key fits, and you step into the darkness. Inside, you encounter a swarm of aggressive bats. You manage to fend them off, but not without sustaining some injuries. Deeper into the cave, you stumble upon a forked path. Which way do you go?\n\n1. Take the path that leads downward.\n2. Take the path that leads to the right.\n3. Take the path that leads to the left.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 93,
+                        "completion_tokens": 184,
+                        "total_tokens": 277
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pAAZBnYOwIRVspHY9V9PmPNRuixe",
+                    "object": "chat.completion",
+                    "created": 1692428175,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Forgotten Dungeon\"! In this text-based adventure game, you find yourself trapped in a mysterious dungeon with no memory of how you got there. Your goal is to explore, solve puzzles, and make choices that will lead you to escape. Be careful though, as your choices may have unexpected consequences. Good luck! \n\nYou wake up in a dimly lit cell, your head pounding. As you try to gather your thoughts, you notice a rusty key on the floor. What would you like to do?\n\n1. Pick up the rusty key.\n2. Look around the cell for any other clues.\n3. Try to remember how you ended up here.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 235,
+                        "completion_tokens": 143,
+                        "total_tokens": 378
+                    }
+                }
+            ]
+        },
+        "session-1f4f79e5-16d0-4e2b-b1ea-67605c92ede5": {
+            "tokenUsage": {
+                "outbound": 271,
+                "inbound": 101
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pO1Bli7yQueZ9oLDXHp1RWoxQF6g",
+                    "object": "chat.completion",
+                    "created": 1692481409,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in a dark, mysterious dungeon with no memory of how you got here. The air is damp and cold, and eerie sounds echo through the corridors. Your goal is to find a way out, but be careful, as danger lurks around every corner. What would you like to do?\n\n1. Search the room for any useful items.\n2. Call out for help.\n3. Explore the corridors.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 101,
+                        "total_tokens": 372
+                    }
+                }
+            ]
+        },
+        "session-cadf41c3-db80-442d-a3e8-04a364ae5e97": {
+            "tokenUsage": {
+                "outbound": 653,
+                "inbound": 197
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pO2Z90zJsZPf1cQsKtFS4CIDmXe1",
+                    "object": "chat.completion",
+                    "created": 1692481495,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple\"! You find yourself in a mysterious ancient temple, filled with secrets and dangers. The air is heavy with a sense of foreboding, and the walls are adorned with ancient symbols. You have a flashlight, a map, and a sense of adventure. What would you like to do?\n\n1. Examine the symbols on the walls.\n2. Use the flashlight to explore the dark corridors.\n3. Consult the map for guidance.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 102,
+                        "total_tokens": 373
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pO4TVD0SoLUBHYnEjtkfHrCz0Z6y",
+                    "object": "chat.completion",
+                    "created": 1692481613,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "As you examine the symbols on the walls, you notice that they depict a series of intricate patterns and hieroglyphs. Some symbols seem familiar, while others are completely foreign. Suddenly, you hear a faint rumbling sound coming from deeper within the temple. What would you like to do?\n\n1. Follow the sound deeper into the temple.\n2. Continue examining the symbols on the walls.\n3. Retreat and find another path.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 382,
+                        "completion_tokens": 95,
+                        "total_tokens": 477
+                    }
+                }
+            ]
+        },
+        "session-366e3ec1-1767-4aa0-ab98-f5e038b3edc5": {
+            "tokenUsage": {
+                "outbound": 486,
+                "inbound": 23
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7p8KiMOrn8C4DN5XHJNtwvY1WRJbD",
+                    "object": "chat.completion",
+                    "created": 1692421116,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "No problem! Take your time to think it over. Remember, your choices will have consequences, so choose wisely."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 486,
+                        "completion_tokens": 23,
+                        "total_tokens": 509
+                    }
+                },
+                null
+            ]
+        },
+        "session-74faa8a8-f8aa-44a9-b809-97bc32cb916e": {
+            "tokenUsage": {
+                "outbound": 910,
+                "inbound": 238
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                }
+            ]
+        },
+        "session-5931ab64-8f06-4b60-9f91-04cfd078d340": {
+            "tokenUsage": {
+                "outbound": 1067,
+                "inbound": 354
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pAHfcyJWaTFkL9VOOYDEB3i8ASgM",
+                    "object": "chat.completion",
+                    "created": 1692428615,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"Hearts of the Sky,\" an epic fantasy adventure game set in a world filled with magic and danger. You play as a young hero who embarks on a quest to save their kingdom from an ancient evil. Along the way, you will face challenging puzzles, make crucial choices, and engage in thrilling battles. Your decisions will shape the outcome of the story, so choose wisely. Good luck, brave hero!\n\nYou find yourself standing at the entrance of a mysterious cave. The air is thick with an eerie silence, and a faint glow emanates from within. What would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 264,
+                        "completion_tokens": 154,
+                        "total_tokens": 418
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pAIM8sCQBTUlYw8bq2tjEL5uKvyu",
+                    "object": "chat.completion",
+                    "created": 1692428658,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Apologies for the lack of context. You are at the cave because you have been tasked with retrieving a powerful artifact that is said to be hidden within. The artifact is crucial for your quest to defeat the ancient evil threatening your kingdom. Now, what would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 440,
+                        "completion_tokens": 88,
+                        "total_tokens": 528
+                    }
+                },
+                {
+                    "id": "chatcmpl-7p8KDUw49GosIjElsvZBAOmzJhlsZ",
+                    "object": "chat.completion",
+                    "created": 1692421085,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 112,
+                        "total_tokens": 475
+                    }
+                }
+            ]
+        },
+        "session-2bbbf9b3-0c90-4274-9cdd-188c535f93aa": {
+            "tokenUsage": {
+                "outbound": 974,
+                "inbound": 177
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pJZVOd3Ul4ZZpH9ecbfyW9XINNM9",
+                    "object": "chat.completion",
+                    "created": 1692464317,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple\"! You find yourself in a mysterious ancient temple deep in the heart of the jungle. As you enter the temple, you notice a dimly lit corridor ahead. What would you like to do?\n\n1. Proceed cautiously down the corridor.\n2. Use a torch to light up the corridor.\n3. Look for any hidden traps or mechanisms.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 83,
+                        "total_tokens": 354
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pAJKUUJ927HJsw1l1MC9uvoPY8mr",
+                    "object": "chat.completion",
+                    "created": 1692428718,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Feeling a sense of weariness, you decide to continue on your journey, ignoring the cave for now. As you walk further, you come across a small village nestled amidst lush greenery. The villagers seem troubled and are whispering among themselves. What would you like to do?\n1. Approach the villagers and ask what's wrong.\n2. Explore the village discreetly to gather information.\n3. Continue on your way without getting involved.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 703,
+                        "completion_tokens": 94,
+                        "total_tokens": 797
+                    }
+                }
+            ]
+        },
+        "session-6d4845d9-f955-4fc9-a7e1-7cd20e0c8813": {
+            "tokenUsage": {
+                "outbound": 826,
+                "inbound": 329
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-GHI789JKL012",
+                    "object": "chat.completion",
+                    "created": 1692242000,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Confident in your abilities, you make your way to the cave's entrance. The rusty key fits, and you step into the darkness. Inside, you encounter a swarm of aggressive bats. You manage to fend them off, but not without sustaining some injuries. Deeper into the cave, you stumble upon a forked path. Which way do you go?\n\n1. Take the path that leads downward.\n2. Take the path that leads to the right.\n3. Take the path that leads to the left.\n4. (Type another action in...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 93,
+                        "completion_tokens": 184,
+                        "total_tokens": 277
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pAIM8sCQBTUlYw8bq2tjEL5uKvyu",
+                    "object": "chat.completion",
+                    "created": 1692428658,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Apologies for the lack of context. You are at the cave because you have been tasked with retrieving a powerful artifact that is said to be hidden within. The artifact is crucial for your quest to defeat the ancient evil threatening your kingdom. Now, what would you like to do?\n1. Enter the cave cautiously.\n2. Investigate the surroundings before entering.\n3. Ignore the cave and continue on your journey.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 440,
+                        "completion_tokens": 88,
+                        "total_tokens": 528
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pIhyIJpMeseMdFHru7665rOulYFt",
+                    "object": "chat.completion",
+                    "created": 1692460998,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Quest for Free Food\"! In this game, you'll embark on a journey to find and enjoy delicious free food. Along the way, you'll encounter various challenges and make choices that will determine your success. Are you ready to begin your quest for free food?"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 293,
+                        "completion_tokens": 57,
+                        "total_tokens": 350
+                    }
+                }
+            ]
+        },
+        "session-cc604bb7-3be3-483c-8b45-82c64829b001": {
+            "tokenUsage": {
+                "outbound": 455,
+                "inbound": 119
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pIidXWJbZF4QC5tLloLgQqjNdUB2",
+                    "object": "chat.completion",
+                    "created": 1692461039,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Great! Let's begin your quest for free food. You find yourself in the bustling city of Grubville, known for its culinary delights. As you wander the streets, your stomach growls loudly, reminding you of your mission. You spot a sign advertising a food festival in the park nearby. What would you like to do?\n\n1. Head to the food festival and sample the various offerings.\n2. Look for a local restaurant and see if they have any free samples.\n3. Ask a passerby if they know of any places offering free food.\n4. Type your own action..."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 455,
+                        "completion_tokens": 119,
+                        "total_tokens": 574
+                    }
+                }
+            ]
+        },
+        "session-a1ca7b4a-8350-4222-a7e1-e39c412b442d": {
+            "tokenUsage": {
+                "outbound": 1574,
+                "inbound": 202
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pONNp4tif0oHOmnBl9Cj9ZLXldX7",
+                    "object": "chat.completion",
+                    "created": 1692482785,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself trapped in a mysterious dungeon with no memory of how you got there. The air is cold and damp, and the only light comes from flickering torches on the stone walls. You see four paths ahead of you, each leading to a different room. What will you do?\n\n1. Take the path on the left.\n2. Take the path on the right.\n3. Take the path straight ahead.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 271,
+                        "completion_tokens": 101,
+                        "total_tokens": 372
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOOXD01E7a7KVYpCtKTT9qmJkiXz",
+                    "object": "chat.completion",
+                    "created": 1692482857,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You cautiously take the path on the left. As you walk down the corridor, you notice a faint sound coming from a nearby room. What will you do?\n\n1. Investigate the sound.\n2. Continue down the corridor.\n3. Return to the previous intersection and choose a different path.\n4. (Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 381,
+                        "completion_tokens": 67,
+                        "total_tokens": 448
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOPSOWGAcICxZZgwtGuicyjaCXn2",
+                    "object": "chat.completion",
+                    "created": 1692482914,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Sorry, but I'm unable to assist with that."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 462,
+                        "completion_tokens": 11,
+                        "total_tokens": 473
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOQReotWOuXhCCzTIoxL6R4IqsqM",
+                    "object": "chat.completion",
+                    "created": 1692482975,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You can't solve global warming in the context of this game. Please choose another action related to the current setting."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 460,
+                        "completion_tokens": 23,
+                        "total_tokens": 483
+                    }
+                }
+            ]
+        },
+        "session-ece64d66-ed00-457a-be94-0cf8d289d2b9": {
+            "tokenUsage": {
+                "outbound": 4828,
+                "inbound": 828
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7pOTIHfpHxBi8lsE1FSzIi8dWqyEN",
+                    "object": "chat.completion",
+                    "created": 1692483152,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Dungeon\"! You find yourself in a dark and eerie dungeon, with only a dim torch lighting your way. You can hear the faint sound of dripping water echoing through the corridors. What would you like to do?\n1. Examine the torch.\n2. Proceed cautiously down the corridor.\n3. Call out for help.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 298,
+                        "completion_tokens": 75,
+                        "total_tokens": 373
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOTr7QrLnjSDObBiPhL84YYVY1su",
+                    "object": "chat.completion",
+                    "created": 1692483187,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You call out for help, but your voice gets swallowed by the silence of the dungeon. No response comes. What would you like to do next?\n1. Examine the torch.\n2. Proceed cautiously down the corridor.\n3. Search for another way out.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 382,
+                        "completion_tokens": 58,
+                        "total_tokens": 440
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOUcbZorZ3e1SJ7ACsJoNIIGQnq6",
+                    "object": "chat.completion",
+                    "created": 1692483234,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "As much as we appreciate your concern for the environment, solving global warming is beyond the scope of this game. Let's focus on the dungeon exploration. What would you like to do next?\n1. Examine the torch.\n2. Proceed cautiously down the corridor.\n3. Search for another way out.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 452,
+                        "completion_tokens": 66,
+                        "total_tokens": 518
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOV5DfhMBcWEosp7G8yaZBY0GxdQ",
+                    "object": "chat.completion",
+                    "created": 1692483263,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You pick up a guitar that was left abandoned in the dungeon. As you strum the strings, a faint melody fills the air, but it doesn't seem to have any effect on your surroundings. What would you like to do next?\n1. Examine the torch.\n2. Proceed cautiously down the corridor.\n3. Search for another way out.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 531,
+                        "completion_tokens": 76,
+                        "total_tokens": 607
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOVQoXzBrRjGfFWlLsXslSJkI8cZ",
+                    "object": "chat.completion",
+                    "created": 1692483284,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You imagine yourself joining a legendary band called \"The Knights of Sound\" (TKS), but unfortunately, this is just a dungeon and there are no musicians around. What would you like to do next?\n1. Examine the torch.\n2. Proceed cautiously down the corridor.\n3. Search for another way out.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 619,
+                        "completion_tokens": 69,
+                        "total_tokens": 688
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOVpfJw69YZrGqwgwn5q2LleVO6o",
+                    "object": "chat.completion",
+                    "created": 1692483309,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You search for another way out and discover a hidden passage behind a crumbling wall. As you enter the passage, you feel a rush of cold air. What would you like to do next?\n1. Investigate the source of the cold air.\n2. Continue exploring the hidden passage.\n3. Go back to the main corridor.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 449,
+                        "completion_tokens": 71,
+                        "total_tokens": 520
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOY4KGBgsONN12rQmK5HIUD8MRVb",
+                    "object": "chat.completion",
+                    "created": 1692483448,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You are playing \"The Kid's Dream\". You are a child who has been working hard to join a special program. You have finally developed a project that you believe will impress the program organizers. You find yourself standing outside the program's headquarters, ready to present your project. What would you like to do?\n1. Take a deep breath and confidently enter the building.\n2. Double-check your project one last time before entering.\n3. Nervously pace back and forth outside the building.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 356,
+                        "completion_tokens": 104,
+                        "total_tokens": 460
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOYZIFSKN7yLyXzYy7ER9kMEbxu8",
+                    "object": "chat.completion",
+                    "created": 1692483479,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You take a moment to double-check your project, making sure everything is in order. Satisfied with your preparations, you gather your courage and enter the building. Inside, you see a receptionist sitting behind a desk, waiting to assist you. What would you like to do?\n1. Approach the receptionist and introduce yourself.\n2. Take a moment to observe the surroundings and gather your thoughts.\n3. Wait for the receptionist to notice you.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 469,
+                        "completion_tokens": 96,
+                        "total_tokens": 565
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOZ68IXdtunSLrw8Lb2QCTH1I0CI",
+                    "object": "chat.completion",
+                    "created": 1692483512,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You quickly rush to the washroom, feeling the need to freshen up before presenting your project. As you enter the washroom, you notice that it is empty and well-maintained. What would you like to do?\n1. Splash some water on your face to calm your nerves.\n2. Check your appearance in the mirror and fix any stray hairs or wrinkles.\n3. Take a deep breath and practice your presentation silently.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 579,
+                        "completion_tokens": 92,
+                        "total_tokens": 671
+                    }
+                },
+                {
+                    "id": "chatcmpl-7pOZfHI1M2qUJOlY7mhx4SMwi0GE4",
+                    "object": "chat.completion",
+                    "created": 1692483547,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "You take out your phone and start watching Computerphile videos on the newest model of ChatGPT. As you immerse yourself in the fascinating world of computer science, you lose track of time. Suddenly, you realize that you've spent too much time in the washroom and you need to present your project. What would you like to do?\n1. Hurriedly leave the washroom and rush to the receptionist.\n2. Quickly finish watching the current video and then leave the washroom.\n3. Panic and frantically search for a way to extend your time.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 693,
+                        "completion_tokens": 121,
+                        "total_tokens": 814
+                    }
+                }
+            ]
+        },
+        "session-62c325b5-cea0-49a1-bb3e-dad2db37ff16": {
+            "tokenUsage": {
+                "outbound": 363,
+                "inbound": 112
+            },
+            "responses": [
+                {
+                    "id": "chatcmpl-7p8qr6aLVG81vjrCXq8LsLaA53ZfH",
+                    "object": "chat.completion",
+                    "created": 1692423109,
+                    "model": "gpt-3.5-turbo-0613",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Welcome to \"The Lost Temple,\" an adventure game where you explore an ancient temple in search of hidden treasures. You'll encounter puzzles, traps, and mysterious creatures. Your choices will determine your fate. Good luck!\n\nAs you enter the temple, you see two passageways ahead. One is dimly lit, and the other is covered in spiderwebs. Which path will you choose?\n1. Take the dimly lit path.\n2. Take the path covered in spiderwebs.\n3. Stand still and observe for a moment.\n(Type your own action...)"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 363,
+                        "completion_tokens": 112,
+                        "total_tokens": 475
+                    }
+                },
+                null
             ]
         }
     }
