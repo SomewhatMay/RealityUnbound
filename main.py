@@ -11,9 +11,13 @@ import random
 import copy
 import time
 
-
-### Variables ###
+# Variables you my change
+mock_data = True
+story_length_choices = 10
+story_length_minutes = 2
 MODEL = "gpt-3.5-turbo"
+
+### Do not edit below unless you know what you're doing ###
 
 token_exists = False
 if Path("./tokens.py"):
@@ -22,15 +26,16 @@ if Path("./tokens.py"):
         token_exists = True
         openai.api_key = tokens.openAIToken()
     except:
-        print("No module named tokens!")
+        print("There was an error loading OpenAI token!")
+else:
+    print("No tokens.py")
 
 sessionId = "session-" + str(uuid.uuid4())
 
-mock_data = False
 is_loading_chat = False
 is_querying = False
 is_type_writing_response = False
-add_new_mock_responses= True
+add_new_mock_responses= False
 
 with open("responses.json", "r") as responseJson:
     responseDB = json.load(responseJson)
@@ -50,17 +55,18 @@ sessionInfo = {
     "responses" : []
 }
 
+
 currentChatName = sessionId
 deafult_messages = [
     {
         "role" : "system",
-        "content" : "You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly 10 choices long or 2 minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! You are NOT a chat assistant, you are only the logic behind the game; please treat each and every message from the user as an action",
+        "content" : f"You simulate what happens in the video game. The messages will contain what the player chooses to do. You are to respond with the consequences/results of the player's action. Whatever you output will be directly sent to the player's screen. Please do not spoil the game, please take it slow; Keep the responses concise as this is a text-based story game and people don't want to read too much. Unless you are explaining something specific, please keep your responses between 1-2 sentences. Give the players at least three choices per message throughout the story and always put a fourth choice saying (Type your own action...). Try to lead the player onto a story that is roughly {story_length_choices} choices long or {story_length_minutes} minutes long. Ensure the story has a satisfying ending and plot but try to incorporate plot twists. Ensure that sometimes, the player's choice does not turn out to be the way they invisioned and it backfires. Also ensure that the player can actually die and either end the game or restart at checkpoint; make sure death is possible but unlikely and avoidable! You are NOT a chat assistant, you interpret every user message as if it were an action to the story and determine the consequences and new actions. Even if the user's response does not make sense in the context of the story, treat it as an action and continue the story.",    
     },
 ]
 
 app = None
 currentChatName
-messages = deafult_messages
+messages = copy.deepcopy(deafult_messages)
 
 
 def _typewriter_help(textable, value, requiredIndex, counter=1):
@@ -154,13 +160,16 @@ class Sidebar(ctk.CTkScrollableFrame):
         self.loadAll()
     
     def add(self, chatInfo):
+        with open("savedChats.json", "r") as savedChatsJson:
+            savedChatsDB = json.load(savedChatsJson)
+        
         chatButton = ctk.CTkButton(
             self, 
             text = chatInfo["name"], 
             fg_color = "#242424", 
             hover_color = "#1D1D1D", 
             anchor = "w",
-            command = lambda: app.loadChat(chatInfo)
+            command = lambda: app.loadByName(chatInfo["name"])
         )
         
         itemsLen = len(self.items)
@@ -189,6 +198,14 @@ class Sidebar(ctk.CTkScrollableFrame):
         app.wait_window(ConfirmDialog("Confirm Delete", "Are you sure you want to delete this save?", delete_callback))
     
     def remove(self, chatInfo, button):
+        global currentChatName, messages
+
+        if currentChatName == chatInfo["name"]:
+            app.mainWindow.messagesWindow.unload_messages()
+            messages = copy.deepcopy(deafult_messages)
+            currentChatName = sessionId
+            app.mainWindow.menuScreen()
+        
         button.destroy()
         savedChatsDB.pop(chatInfo["name"])
         
@@ -393,6 +410,7 @@ class MainWindow(ctk.CTkFrame):
         self.chatBox = chatBox
         self.sendButton = sendButton
         
+        self.in_menu_screen = False
         self.menuScreen()
 
     def sendMessage(self):
@@ -422,6 +440,7 @@ class MainWindow(ctk.CTkFrame):
         app.makeCompletion()
 
     def menuScreen(self):
+        self.in_menu_screen = True
         self.grid_columnconfigure(0, weight = 1)
         self.grid_columnconfigure(1, weight = 1)
         self.grid_columnconfigure(2, weight = 1)
@@ -435,10 +454,11 @@ class MainWindow(ctk.CTkFrame):
         
         # the other stuff
         self.messagesWindow.place(relx = 2)
-        self.chatBox.forget()
-        self.sendButton.forget()
+        self.chatBox.place(relx = 2)
+        self.sendButton.place(relx = 2)
         
     def chatScreen(self):
+        self.in_menu_screen = False
         self.grid_columnconfigure(0, weight = 1)
         self.grid_columnconfigure(1, weight = 0, minsize = 30)
         self.grid_columnconfigure(2, weight = 0)
@@ -512,18 +532,17 @@ class NewJourneyWindow(ctk.CTkToplevel):
         if hasAdditionalContext == True:
             newMessages[0]["content"] += additionalContext
         
-        newMessages[0]["content"] += " Please begin by explaining and introducing the game to the player."
+        newMessages[0]["content"] += " Please begin by explaining and introducing the game to the player and the current setting (with choices)."
 
         chatInfo = {
             "name": newChatName,
             "savedTime": time.time(),
             "messages": newMessages
         }
-        
-        print(chatInfo)
 
+        app.saveChat(newChatName)
+        chatInfo["name"] = currentChatName
         app.loadChat(chatInfo)
-        app.saveChat(chatInfo["name"])
         self.destroy()
 
         app.makeCompletion()
@@ -559,7 +578,7 @@ class App(ctk.CTk):
         sidebarTitle.pack()
         
         saveChatIcon = ImageTk.PhotoImage(Image.open("assets/SaveIcon.png").resize((20, 20), Image.Resampling.BILINEAR))
-        saveChatButton = ctk.CTkButton(self, image = saveChatIcon, text = "", width = 30, command = self.saveChat)
+        saveChatButton = ctk.CTkButton(self, image = saveChatIcon, text = "", width = 30, command = self.makeNewSave)
         saveChatButton.grid(row = 0, column = 2, padx = (0, 10), pady = (10, 0), sticky="nsew")
         
         newChatButton = ctk.CTkButton(self, text = "+", width = 30, command = self.newChat)
@@ -619,6 +638,7 @@ class App(ctk.CTk):
             if mock_data:
                 time.sleep(3)
                 response = mockResponsesDB[random.randint(0, len(mockResponsesDB) - 1)]
+                print(response)
             else:
                 try:
                     response = openai.ChatCompletion.create(
@@ -657,9 +677,29 @@ class App(ctk.CTk):
 
 
     def newMessage(self, messageInfo):
-        print(messages)
         messages.append(messageInfo)
         return self.mainWindow.messagesWindow.add_message(messageInfo)
+
+
+    def makeNewSave(self):
+        if self.mainWindow.in_menu_screen == True:
+            return
+
+        new_chat_name = self.saveChat()
+        if not is_empty_string(new_chat_name):
+            with open("savedChats.json", "r") as savedChatsJson:
+                global savedChatsDB
+                savedChatsDB = json.load(savedChatsJson)
+            
+            self.loadChat(savedChatsDB[new_chat_name])
+
+
+    def loadByName(self, chatName):
+        with open("savedChats.json", "r") as savedChatsJson:
+            global savedChatsDB
+            savedChatsDB = json.load(savedChatsJson)
+
+        app.loadChat(savedChatsDB[chatName])
 
 
     def mock_data_result(self, result):
@@ -705,11 +745,16 @@ class App(ctk.CTk):
         if (is_loading_chat == True) or (is_querying == True):
             return
 
-        chatName = chatName if chatName else ctk.CTkInputDialog(text = "Name your chat", title = "Save Chat").get_input()
+        chatName = chatName if (not is_empty_string(chatName)) else ctk.CTkInputDialog(text = "Name your chat", title = "Save Chat").get_input()
         
         if not is_empty_string(chatName):
+            with open("savedChats.json", "r") as savedChatsJson:
+                global savedChatsDB
+                savedChatsDB = json.load(savedChatsJson)
+
             chatName = str(chatName)
             currentChatName = chatName
+            print(f"Current chat name is {currentChatName}")
             chatinfo = {
                 "name" : chatName,
                 "savedTime" : time.time(),
@@ -717,12 +762,16 @@ class App(ctk.CTk):
             }
             freshChat = chatName in savedChatsDB
             savedChatsDB[chatName] = chatinfo
+
+            print(f"Added messages to index {chatName}. the messages are {repr(messages)}")
             
             with open("savedChats.json", "w") as savedChatsJson:
                 json.dump(savedChatsDB, savedChatsJson, indent=4)
             
             if not freshChat:
                 self.sidebar.add(chatinfo)
+            
+            return chatName
         
 
 def atExit():
