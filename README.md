@@ -19,6 +19,7 @@ Setup is easy, just follow the steps:
     def openAIToken():
         return "sk-..." # Enter your token in the string
     ```
+    Grab your token from [here](https://platform.openai.com/account/api-keys).\
     *If this step is omitted, it will prompt for a token once the app is launched. The entered token is stored locally only for the duration of the session*
 7. Open cmd and change the directory to the repository folder, then run main.py using:
     ```
@@ -52,6 +53,7 @@ It is highly advised to use the **Local Machine** installation instead! Followin
     def OpenAIToken():
     	return os.environ['OpenAI Token']
    ```
+   Grab your token from [here](https://platform.openai.com/account/api-keys).\
     *If this step is omitted, the program will refuse to open.*
 7. Press on Run to test out the program :)
 
