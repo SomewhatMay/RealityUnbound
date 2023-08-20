@@ -12,9 +12,9 @@ import copy
 import time
 
 # Variables you my change
-mock_data = True
-story_length_choices = 10
-story_length_minutes = 2
+mock_data = False
+story_length_choices = 30
+story_length_minutes = 5
 MODEL = "gpt-3.5-turbo"
 
 ### Do not edit below unless you know what you're doing ###
