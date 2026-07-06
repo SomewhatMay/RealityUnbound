@@ -58,7 +58,7 @@ It is highly advised to use the **Local Machine** installation instead! Followin
 7. Press on Run to test out the program :)
 
 # Customization 🎨
-There are a few things that can not be changed from the app and must be changed from within the code (found in `main.py`).
+There are a few things that can not be changed from the app and must be changed from within the code (found in `config.py`).
 ```py
     mock_data: boolean
 ```
