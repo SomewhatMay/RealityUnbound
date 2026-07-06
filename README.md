@@ -14,16 +14,16 @@ Setup is easy, just follow the steps:
     ```
     $pip install openai customtkinter tk pillow
     ```
-5. (OPTIONAL) Create a tokens.py with the following function:
+5. (OPTIONAL) Create a `src/tokens.py` with the following function:
     ```python
     def openAIToken():
         return "sk-..." # Enter your token in the string
     ```
     Grab your token from [here](https://platform.openai.com/account/api-keys).\
     *If this step is omitted, it will prompt for a token once the app is launched. The entered token is stored locally only for the duration of the session*
-7. Open cmd and change the directory to the repository folder, then run main.py using:
+7. Open cmd and change the directory to the repository folder, then run the app using:
     ```
-    $python main.py
+    $python src/main.py
     ```
 
 ### Replit Installation (Not recommended)
